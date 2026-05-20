@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마켓컬리-회원가입</title>
+  <style>
+    h1 { text-align: center; }
+    h1 img { vertical-align: middle; }
+    h1 span { font-size: 18px; font-weight: normal; color: #5F0080; }
+
+    ul { padding: 0%;}
+    li { list-style: none; padding: 10px 20px;}
+
+    #container {
+      width: 640px; margin: auto;
+      /* border-top: 2px solid #333; */
+    }
+    #container span {
+      display: inline-block; 
+      border-top 0; width: 139px;}
+
+    input {
+      width: 280px; height: 40px;
+      border: 1px solid #ddd;
+      outline: none;
+      border-radius: 4px;
+      padding-left: 15px;
+    }
+    input[type="button"] { width: 100px; padding-left: 0; }
+    input[type="button"]:hover { background: #aaa; color: #fff }
+    input[type="radio"],input[type="checkbox"] { width: 10px; height: 10px;}
+    
+    .short { width:150px; }
+    button { padding: 10px 40px; background: #5f0080; color: #fff; 
+    border:none; border-radius: 4px; }
+    button:hover { background: #bd5bdd;}
+
+  </style>
+</head>
+
+<body>
+  <h1><img src="img/kurly.svg" alt="">
+    <span>마켓컬리</span>
+  </h1>
+
+  <div id="container">
+    <form action="" method="post">
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+        <li>
+          <span>아이디</span>
+          <input type="text" maxlength="15"
+          placeholder="아이디를 입력해주세요"
+          required>
+        </li>
+        <li>
+          <span>비밀번호</span>
+          <input type="password" maxlength="15"
+          placeholder="비밀번호를 입력해주세요">
+        </li>
+        <li>
+          <span>비밀번호 확인</span>
+          <input type="password" maxlength="15"
+          placeholder="비밀번호를 한번 더 입력해주세요">
+        </li>
+        </ul>
+      </fieldset>
+<br>
+      <fieldset>
+        <legend>가입자정보</legend>
+        <ul>
+          <li>
+            <span>이름</span>
+            <input type="text" maxlength="5"
+            placeholder="이름을 입력해주세요"
+            required>
+          </li>
+          <li>
+            <span>이메일1</span>
+            <input type="email"
+            placeholder="이메일을 직접 입력해주세요">
+          </li>
+          <li>
+            <span>이메일2</span>
+            <input type="text" class="short">@
+            <select id="selet1">
+              <option>---- 선택하기 ----</option>
+              <option value="naver">naver.com</option>
+              <option value="gmail">gmail.com</option>
+              <option value="hanmail">hanmail.net</option>
+              <option value="kakao">kakao.com</option>
+              <option value="etc">직접 입력</option>
+            </select>
+          </li>
+          <li>
+            <span>전화번호</span>
+            <input type="tel" maxlength="12"
+            value="010">
+          </li>
+          <li>
+            <span>휴대폰번호</span>
+            <input type="number" maxlength="12"
+            placeholder="숫자만 입력해주세요">
+            <input type="button" value="인증번호 받기">
+          </li>
+          <li>
+            <span>생년월일</span>
+            <input type="date" class="short">
+          </li>
+          <li>
+            <span>홈페이지 주소</span>
+            <input type="url" value="http://">
+          </li>
+          <li>
+            <span>우편번호</span>
+            <input type="search" placeholder="지번/도로명을 입력">
+            <input type="button" value="찾기">
+          </li>
+          <li>
+            <span>성별</span>
+            <input type="radio" name="gender" id="man">
+            <input type="radio" name="gender" id="woman">
+            <input type="radio" name="gender" id="nogender">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="man">남자</label> /
+            <label for="woman">여자</label> /
+            <label for="nogender">선택안함</label>
+          </li>
+          <li>
+            <span>관심분야</span>
+            <label><input type="checkbox"> 주식 </label>
+            <label><input type="checkbox"> 부동산  </label>
+            <label><input type="checkbox"> 스포츠 </label>
+            <label><input type="checkbox"> 영화 </label>
+            <label><input type="checkbox"> 음악 </label>
+            <label><input type="checkbox"> 건강 </label>
+            <label><input type="checkbox"> 쇼핑 </label>
+          </li>
+          <li>
+            <span>나이대</span>
+            <input type="range" min="10" max="60" id="slider" step="10">
+            <output for="slider"></output>
+          </li>
+          <li>
+            <span>사진업로드</span>
+              <input type="file" style="border: none;">
+          </li>
+          <li>
+            <span style="vertical-align: top;">가입동기</span>
+            <textarea rows="5" cols="50" style="resize: none;">가입동기를 자세하게 서술해주세요</textarea>
+          </li>
+
+
+        </ul>
+      </fieldset>
+
+      <div style="text-align: center; padding:20px">
+        <button type="submit">확인</button>
+        <button type="reset">취소</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
